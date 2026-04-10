@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Welcome Page</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background: url("your-bg-image.jpg") no-repeat center center/cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        color: white;
+        text-align: center;
+    }
+
+    .container {
+        background: rgba(0, 0, 0, 0.6);
+        padding: 40px;
+        border-radius: 20px;
+        width: 80%;
+        max-width: 400px;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    button {
+        padding: 15px 30px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        background: #00c8ff;
+        color: black;
+        font-weight: bold;
+        margin-top: 15px;
+    }
+
+    button:hover {
+        background: #00a8d8;
+    }
+</style>
+</head>
+<body>
+
+<audio id="bgMusic" src="music/Munbe Vaa Song BGM Ringtone Download - MobCup.Com.Co (1).mp3"></audio>
+
+<div class="container">
+    <h1>Welcome to My Songs & Videos Page</h1>
+    <p>Click the button below to start your experience</p>
+
+    <button onclick="playMusic()">Play Music</button>  
+    <br><br>
+
+    <!-- New NEXT button -->
+    <button onclick="goNext()">Next ➜</button>
+</div>
+
+<script>
+function playMusic() {
+    var music = document.getElementById("bgMusic");
+    music.play();
+    alert("Music Started 🎵");
+}
+
+function goNext() {
+    window.location.href = "video.html";  // Go to video page
+}
+</script>
+
+</body>
+</html>
